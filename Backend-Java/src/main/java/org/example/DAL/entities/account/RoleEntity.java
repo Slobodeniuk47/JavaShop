@@ -19,11 +19,6 @@ import java.util.List;
 @Entity
 @Table(name="tbl_roles")
 public class RoleEntity extends BaseEntity {
-//    @ManyToMany(mappedBy = "roles")
-//    private List<UserEntity> users;
-//    public RoleEntity() {
-//        users = new ArrayList<UserEntity>();
-//    }
     @OneToMany(mappedBy = "role")
     private List<UserRoleEntity> userRoles = new ArrayList<>();
 }
